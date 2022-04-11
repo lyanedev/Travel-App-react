@@ -1,32 +1,46 @@
-import {Autocomplete} from "@react-google-maps/api";
+import { Autocomplete } from "@react-google-maps/api";
+import {
+  Typography,
+  Input,
+  Box,
+  Container,
+  InputAdornment,
+  TextField,
+} from "@mui/material";
+import ScreenSearchDesktopTwoToneIcon from "@mui/icons-material/ScreenSearchDesktopTwoTone";
 
-import {AppBar, Toolbar, Typography, Input, Box, Container, InputAdornment} from '@mui/material';
-import ScreenSearchDesktopTwoToneIcon from '@mui/icons-material/ScreenSearchDesktopTwoTone';
-import {InboxOutlined} from "@mui/icons-material";
+import { AppName, HeaderBar, HeaderTextField, HeaderToolbar } from "./styles";
 
 const Header = (props) => {
-
   return (
-      <>
-        <AppBar position="static">
-          <Container maxWidth="lg">
-            <Toolbar>
-              <Typography variant="h5">Travel App</Typography>
-              <Box display="flex">
-                <Typography variant="h6">Decouvrez!</Typography>
-                <Box>
-                  <Input autoFocus variant="outlined" placeholder="Paris, Londres,..." startAdornment={
-                    <InputAdornment position="start">
-                      <ScreenSearchDesktopTwoToneIcon/>
-                    </InputAdornment>
-                  }/>
-                </Box>
+    <>
+      <HeaderBar position="static">
+        <Container maxWidth="lg">
+          <HeaderToolbar>
+            <AppName variant="h5">Travel App</AppName>
+            <Box display="flex">
+              <Typography variant="h6" sx={{ marginRight: "1rem" }}>
+                Decouvrez!
+              </Typography>
+              <Box>
+                <HeaderTextField
+                  autoFocus
+                  placeholder="Paris, Londres,..."
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <ScreenSearchDesktopTwoToneIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
               </Box>
-            </Toolbar>
-          </Container>
-        </AppBar>
-      </>
+            </Box>
+          </HeaderToolbar>
+        </Container>
+      </HeaderBar>
+    </>
   );
-}
+};
 
 export default Header;
