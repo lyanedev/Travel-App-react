@@ -9,7 +9,7 @@ const Map = (props) => {
 
   return (
     <>
-      <Box style={{ width: "100%", height: "80 vh" }}>
+      <Box style={{ width: "100%", height: "80vh" }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyBpj82QKELnAq_SGymBerBe3bVwcnora_g" }}
           defaultCenter={coordinates}

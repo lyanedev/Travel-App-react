@@ -1,12 +1,5 @@
 import { Autocomplete } from "@react-google-maps/api";
-import {
-  Typography,
-  Input,
-  Box,
-  Container,
-  InputAdornment,
-  TextField,
-} from "@mui/material";
+import { Typography, Box, Container, InputAdornment } from "@mui/material";
 import ScreenSearchDesktopTwoToneIcon from "@mui/icons-material/ScreenSearchDesktopTwoTone";
 
 import { AppName, HeaderBar, HeaderTextField, HeaderToolbar } from "./styles";
@@ -29,7 +22,9 @@ const Header = (props) => {
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position="start">
-                        <ScreenSearchDesktopTwoToneIcon />
+                        <ScreenSearchDesktopTwoToneIcon
+                          sx={{ color: "#fff" }}
+                        />
                       </InputAdornment>
                     ),
                   }}
